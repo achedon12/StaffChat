@@ -12,13 +12,15 @@ class Chat extends PluginBase implements Listener{
     public $onChat = [];
 
     protected function onEnable() : void{
-        $this->getLogger()->info("plugin enable");
+        $this->getLogger()->info("plugin disable");
 
-        $this->getServer()->getPluginManager()->registerEvents(new PlayerEvents, $this);
+
+        $this->getServer()->getPluginManager()->registerEvents(new PlayerEvents(), $this);
 
         $this->getServer()->getCommandMap()->registerAll('Commands',[
-            new staff("staffchat","chat with your staff","/staffchat")
+            new staff("staffchat","send message just to your staff","/staffchat")
         ]);
+
     }
     public function onDisable() : void{
         $this->getLogger()->info("plugin disable");
