@@ -7,7 +7,6 @@ use achedon12\StaffChat\Events\PlayerEvents;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
-
 class Chat extends PluginBase implements Listener{
 
     public $onChat = [];
